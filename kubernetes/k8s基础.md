@@ -44,9 +44,12 @@ Kubernetes higher-level abstractions rely on Controllers
   - 一般情况kubernetes不会直接创建pod。
   - 5种
     - Deployment：常用。自动创建RecplicaSet。
+      - kubectl get/edit/delete/describe deployment deployment-id
     - ReplicaSet：pod多副本管理。
+      - kubectl get/edit/delete/describe rs replicaset-id
     - DaemonSet：
     - StatefulSet：
+      - kubectl get/edit/delete/describe sts statefulset-id
     - Job: 结束就删除pod的应用。其他都是长期运行。
 
 - Service

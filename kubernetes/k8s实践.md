@@ -42,7 +42,43 @@ sudo dpkg -i *.deb
 
 
 
+单机环境下试用kubernetes
+查看Linux内核信息：
+cat /boot/config-***-generic
+kubernetes 条件需求
+1. 你必须拥有一台安装有Docker的机器。
+
+2. 你的内核必须支持 memory and swap accounting 。确认你的linux内核开启了如下配置:
+CONFIG_RESOURCE_COUNTERS=y
+CONFIG_MEMCG=y
+CONFIG_MEMCG_SWAP=y
+CONFIG_MEMCG_SWAP_ENABLED=y
+CONFIG_MEMCG_KMEM=y
+
+Note： $cat /boot/config-***-generic
+
+3. 以命令行参数方式,在内核启动时开启 memory and swap accounting 选项:
+GRUB_CMDLINE_LINUX="cgroup_enable=memory swapaccount=1"
+
+$vim /etc/default/grub
+
+# 修改 GRUB_CMDLINE_LINUX="" ==> GRUB_CMDLINE_LINUX="cgroup_enable=memory"
+
+# 保存后, 更新grub.cfg
+
+update-grub
+
+reboot
+
+Note :$cat /proc/cmdline
+
+  BOOT_IMAGE=/boot/vmlinuz-3.18.4-aufs root=/dev/sda5 ro cgroup_enable=memory swapaccount=1
+
+
+
 参考资料：
 [1] https://www.virtualbox.org/wiki/Downloads
 [2] 升级linux内核： https://www.linuxidc.com/Linux/2019-05/158569.htm
-
+[3] [安装kubernetes的条件](https://www.cnblogs.com/zhangeamon/p/5197655.html)
+[4] [适合入门的kubernetes文档](https://www.kubernetes.org.cn/doc-5)
+[5] [install kubernetes的文档，不过不是很好用](https://matthewpalmer.net/kubernetes-app-developer/articles/install-kubernetes-ubuntu-tutorial.html)
