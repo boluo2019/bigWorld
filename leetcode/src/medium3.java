@@ -32,6 +32,7 @@ public class medium3 {
 
 	// 暴力法，时间复杂度为O(n^3)
 	// 正解：滑动窗口，HashSet
+	// 参考：https://leetcode-cn.com/problems/longest-substring-without-repeating-characters/solution/wu-zhong-fu-zi-fu-de-zui-chang-zi-chuan-by-leetcod/
 	public static int lengthOfLongestSubstring(String s) {
 
 		return 0;
