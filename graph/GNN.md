@@ -14,19 +14,25 @@
     - 根据更新后的embedding预测节点的标签。 
   - xx
 
+ - GNN在反欺诈中的应用
+    - 涉及到的一些概念：GeniePath图学习方法、node2vec无监督图学习方法、GBDT非图学习方法
+
 参考资料：
 
-[1] [清华有一个实验室总结的GNN必读论文](https://github.com/thunlp/GNNPapers)
+* [清华有一个实验室总结的GNN必读论文](https://github.com/thunlp/GNNPapers)
 
-[2] [知乎上一个不错的专栏系列文档](https://zhuanlan.zhihu.com/p/77317842)
+* [知乎上一个不错的专栏系列文档](https://zhuanlan.zhihu.com/p/77317842)
 
-[3] [知乎上有一个专栏已经有人翻译了这篇文章](https://linkeddataorchestration.com/2019/09/10/graph-algorithms-neural-networks-and-graph-databases-the-year-of-the-graph-newsletter-september-2019/)
+* [知乎上有一个专栏已经有人翻译了这篇文章](https://linkeddataorchestration.com/2019/09/10/graph-algorithms-neural-networks-and-graph-databases-the-year-of-the-graph-newsletter-september-2019/)
 
-[4] [cikm](http://www.cikm2019.net/session.html)
+* [cikm](http://www.cikm2019.net/session.html)
 
-[] []()
-[] []()
-[] []()
+* [从淘宝的反运费险欺诈来讲gnn在反欺诈中的应用的一片不错的文章](https://juejin.im/post/5b7d1677e51d4538c411d25d)
+
+* [上面反欺诈实例的作者在github上放了论文和ppt](https://github.com/chenlianMT/Who-Stole-the-Postage-)
+
+* [图神经网络综述](https://juejin.im/post/5c3404edf265da61561f6e1c)
+
 [] []()
 [] []()
 [] []()
