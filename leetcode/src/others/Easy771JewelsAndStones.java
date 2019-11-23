@@ -1,3 +1,5 @@
+package others;
+
 import java.util.HashSet;
 
 public class Easy771JewelsAndStones {

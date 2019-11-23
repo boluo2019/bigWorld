@@ -1,3 +1,5 @@
+package others;
+
 public class EasyLCP1GuessNumbers {
 	/**
 	 * 小A 和 小B 在玩猜数字。
