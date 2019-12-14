@@ -1,80 +1,99 @@
 package stack;
 
-import java.util.Stack;
+import java.util.ArrayDeque;
+import java.util.Queue;
 
 public class Easy225ImplementStackUsingQueues {
 
 	/**
-	 * Implement the following operations of a queue using stacks.
+	 * Implement the following operations of a stack using queues.
 	 *
-	 * push(x) -- Push element x to the back of queue.
-	 * pop() -- Removes the element from in front of queue.
-	 * peek() -- Get the front element.
-	 * empty() -- Return whether the queue is empty.
+	 * push(x) -- Push element x onto stack.
+	 * pop() -- Removes the element on top of the stack.
+	 * top() -- Get the top element.
+	 * empty() -- Return whether the stack is empty.
 	 * Example:
 	 *
-	 * MyQueue queue = new MyQueue();
+	 * MyStack stack = new MyStack();
 	 *
-	 * queue.push(1);
-	 * queue.push(2);
-	 * queue.peek();  // returns 1
-	 * queue.pop();   // returns 1
-	 * queue.empty(); // returns false
+	 * stack.push(1);
+	 * stack.push(2);
+	 * stack.top();   // returns 2
+	 * stack.pop();   // returns 2
+	 * stack.empty(); // returns false
 	 * Notes:
 	 *
-	 * You must use only standard operations of a stack --
-	 * which means only push to top, peek/pop from top, size, and is empty operations are valid.
-	 * Depending on your language, stack may not be supported natively.
-	 * You may simulate a stack by using a list or deque (double-ended queue),
-	 * as long as you use only standard operations of a stack.
-	 * You may assume that all operations are valid
-	 * (for example, no pop or peek operations will be called on an empty queue).
+	 * You must use only standard operations of a queue -- which means
+	 * only push to back, peek/pop from front, size, and is empty operations are valid.
+	 * Depending on your language, queue may not be supported natively.
+	 * You may simulate a queue by using a list or deque (double-ended queue),
+	 * as long as you use only standard operations of a queue.
+	 * You may assume that all operations are valid (for example,
+	 * no pop or top operations will be called on an empty stack).
 	 *
 	 * 来源：力扣（LeetCode）
-	 * 链接：https://leetcode-cn.com/problems/implement-queue-using-stacks
+	 * 链接：https://leetcode-cn.com/problems/implement-stack-using-queues
 	 * 著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。
 	 */
 
-	class MyQueue {
-		private Stack<Integer> stack;
+	static class MyStack {
+
+		private Queue<Integer> queue;
+		private int top;
 
 		/** Initialize your data structure here. */
-		public MyQueue() {
-			stack = new Stack<>();
+		public MyStack() {
+			queue = new ArrayDeque<>(4);
 		}
 
-		/** Push element x to the back of queue. */
+		/** Push element x onto stack. */
 		public void push(int x) {
+			queue.add(x);
+			top = x;
 		}
 
-		/** Removes the element from in front of queue and returns that element. */
+		/** Removes the element on top of the stack and returns that element. */
 		public int pop() {
-			return 0;
+			int index = queue.size();
+			while (index > 1) {
+				int tmp = queue.remove();
+				queue.add(tmp);
+				--index;
+
+				if (index == 1) {
+					top = tmp;
+				}
+			}
+
+			return queue.remove();
 		}
 
-		/** Get the front element. */
-		public int peek() {
-			return 0;
-
+		/** Get the top element. */
+		public int top() {
+			return top;
 		}
 
-		/** Returns whether the queue is empty. */
+		/** Returns whether the stack is empty. */
 		public boolean empty() {
-			return true;
-
+			return queue.isEmpty();
 		}
 	}
 
 	/**
-	 * Your MyQueue object will be instantiated and called as such:
-	 * MyQueue obj = new MyQueue();
+	 * Your MyStack object will be instantiated and called as such:
+	 * MyStack obj = new MyStack();
 	 * obj.push(x);
 	 * int param_2 = obj.pop();
-	 * int param_3 = obj.peek();
+	 * int param_3 = obj.top();
 	 * boolean param_4 = obj.empty();
 	 */
 
 	public static void main(String[] args) {
-
+		MyStack myStack = new MyStack();
+		myStack.push(1);
+		myStack.push(2);
+		System.out.println(myStack.top());
+		System.out.println(myStack.pop());
+		System.out.println(myStack.empty());
 	}
 }

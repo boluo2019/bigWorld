@@ -1,7 +1,7 @@
 本模块主要是leetcode上stack相关的题目
 
 * stack 与 vector 的关系？  
-stack继承自vector，并增加了5个接口。  
+stack继承自vector，并增加了5个接口。
 * stack 与 Deque 的关系？  
 
 

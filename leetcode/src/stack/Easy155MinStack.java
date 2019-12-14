@@ -1,5 +1,8 @@
 package stack;
 
+import java.util.Arrays;
+import java.util.Stack;
+
 public class Easy155MinStack {
 
 	/**
@@ -27,29 +30,105 @@ public class Easy155MinStack {
 	 * 著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。
 	 */
 
-	class MinStack {
+	static class MinStack2 {
+		private Stack<Integer> stackMin;
+		private Stack<Integer> stackAll;
 
 		/** initialize your data structure here. */
-		public MinStack() {
-
+		public MinStack2() {
+			stackMin = new Stack<>();
+			stackAll = new Stack<>();
 		}
 
 		public void push(int x) {
+			if (stackMin.empty()) {
+				stackMin.push(x);
+			} else if (x <= stackMin.peek()) {
+				stackMin.push(x);
+			}
 
+			stackAll.push(x);
 		}
 
 		public void pop() {
-
+			int top = stackAll.pop();
+			if (top == stackMin.peek()) {
+				stackMin.pop();
+			}
 		}
 
 		public int top() {
-			return 0;
+			return stackAll.peek();
 		}
 
 		public int getMin() {
-			return 0;
+			checkIfNeedUpdate();
+			return stackMin.peek();
+		}
+
+		private void checkIfNeedUpdate() {
+			if (stackMin.empty() && !stackAll.empty()) {
+				stackMin.push(stackAll.peek());
+			}
 		}
 	}
+
+	static class MinStack {
+		private int[] arrayMin;
+		private int nextIndexMin = 0;
+		private int[] arrayAll;
+		private int nextIndexAll = 0;
+
+		/** initialize your data structure here. */
+		public MinStack() {
+			arrayMin = new int[4]; // 最终测试结果，4或者8比较好，比1或者16快1ms。
+			arrayAll = new int[4];
+		}
+
+		private int[] checkIfNeedResize(int[] array) {
+			return Arrays.copyOf(array, array.length * 2);
+		}
+
+		public void push(int x) {
+			if (nextIndexMin == arrayMin.length) {
+				arrayMin = checkIfNeedResize(arrayMin);
+			}
+
+			if (nextIndexAll == arrayAll.length) {
+				arrayAll = checkIfNeedResize(arrayAll);
+			}
+
+			if (nextIndexMin > 0) {
+				if (x <= arrayMin[nextIndexMin - 1]) {
+					arrayMin[nextIndexMin++] = x;
+				}
+			} else {
+				arrayMin[nextIndexMin++] = x;
+			}
+
+			arrayAll[nextIndexAll++] = x;
+		}
+
+		public void pop() {
+			int top = arrayAll[--nextIndexAll];
+			if (top == arrayMin[nextIndexMin - 1]) {
+				--nextIndexMin;
+			}
+		}
+
+		public int top() {
+			return arrayAll[nextIndexAll - 1];
+		}
+
+		public int getMin() {
+			if (nextIndexMin == 0 && nextIndexAll > 0) {
+				arrayMin[nextIndexMin++] = arrayAll[nextIndexAll - 1];
+			}
+
+			return arrayMin[nextIndexMin - 1];
+		}
+	}
+
 
 	/**
 	 * Your MinStack object will be instantiated and called as such:
@@ -61,6 +140,13 @@ public class Easy155MinStack {
 	 */
 
 	public static void main(String[] args) {
-
+		MinStack minStack = new MinStack();
+		minStack.push(-2);
+		minStack.push(0);
+		minStack.push(-3);
+		System.out.println(minStack.getMin());
+		minStack.pop();
+		System.out.println(minStack.top());
+		System.out.println(minStack.getMin());
 	}
 }
