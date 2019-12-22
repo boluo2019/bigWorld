@@ -45,11 +45,84 @@ public class Easy682BaseballGame {
 	 * 著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。
 	 */
 
+	/**
+	 * 栈顶指针的移动
+	 * 本地值得关注的点：java中 switch 和 if-else 性能比较
+	 * 1. case条件比较多时，switch的性能明显比较好。https://mp.weixin.qq.com/s/8Q87XZPEfGhfInbAuRAeWA
+	 * 2. https://stackoverflow.com/questions/10287700/difference-between-jvms-lookupswitch-and-tableswitch
+	 */
+
+	public static int calPoints1(String[] ops) {
+		int[] stack = new int[ops.length];
+		int topIndex = -1;
+		int sum = 0;
+
+		for (int i = 0; i < ops.length; i++) {
+			if ("+".equals(ops[i])) {
+				if (i - 2 < 0) {
+					throw new IllegalArgumentException("+之前至少有2个integer");
+				}
+				stack[++topIndex] = stack[topIndex - 1] + stack[topIndex - 2];
+				sum += stack[topIndex];
+			} else if ("C".equals(ops[i])) {
+				sum -= stack[topIndex];
+				--topIndex;
+			} else if ("D".equals(ops[i])) {
+				if (i - 1 < 0) {
+					throw new IllegalArgumentException("+之前至少有1个integer");
+				}
+				stack[++topIndex] = 2 * stack[topIndex - 1];
+				sum += stack[topIndex];
+			} else { // integer
+				stack[++topIndex] = Integer.parseInt(ops[i]);
+				sum += stack[topIndex];
+			}
+		}
+
+		return sum;
+	}
+
 	public static int calPoints(String[] ops) {
-		return 0;
+		int[] stack = new int[ops.length];
+		int topIndex = -1;
+		int sum = 0;
+
+		for (int i = 0; i < ops.length; i++) {
+			switch (ops[i]) {
+				case "+": {
+					if (i - 2 < 0) {
+						throw new IllegalArgumentException("+之前至少有2个integer");
+					}
+					stack[++topIndex] = stack[topIndex - 1] + stack[topIndex - 2];
+					sum += stack[topIndex];
+					break;
+				}
+				case "C": {
+					sum -= stack[topIndex];
+					--topIndex;
+					break;
+				}
+				case "D": {
+					if (i - 1 < 0) {
+						throw new IllegalArgumentException("+之前至少有1个integer");
+					}
+					stack[++topIndex] = 2 * stack[topIndex - 1];
+					sum += stack[topIndex];
+					break;
+				}
+				default: {
+					stack[++topIndex] = Integer.parseInt(ops[i]);
+					sum += stack[topIndex];
+				}
+			}
+		}
+
+		return sum;
 	}
 
 	public static void main(String[] args) {
-
+		System.out.println(calPoints(new String[]{"5","-2","4","C","D","9","+","+"})); // 27
+		System.out.println(calPoints(new String[]{"5","2","C","D","+"})); // 30
+		System.out.println(calPoints(new String[]{"1","D","D","D"})); // 30
 	}
 }

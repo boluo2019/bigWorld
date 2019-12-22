@@ -40,11 +40,89 @@ public class Easy844BackspaceStringCompare {
 	 * 著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。
 	 */
 
-	public static boolean backspaceCompare(String S, String T) {
+	/**
+	 * 双指针
+	 */
+
+	public static boolean backspaceCompare1(String S, String T) {
+		// 解法1： O(S.len+T.len) time, O(1) space.
+		char backspace = '#';
+		char[] schars = S.toCharArray();
+		int sResIndex = 0;
+		int sIndex = 0;
+		char[] tchars = T.toCharArray();
+		int tResIndex = 0;
+		int tIndex = 0;
+
+		while (sIndex < schars.length) {
+			if (backspace != schars[sIndex]) {
+				schars[sResIndex++] = schars[sIndex];
+			} else if (sResIndex > 0)  {
+				sResIndex--;
+			}
+			sIndex++;
+		}
+
+		while (tIndex < tchars.length) {
+			if (backspace != tchars[tIndex]) {
+				tchars[tResIndex++] = tchars[tIndex];
+			} else if (tResIndex > 0)  {
+				tResIndex--;
+			}
+			tIndex++;
+		}
+
+		if (sResIndex != tResIndex) {
+			return false;
+		}
+
+		for (int i = 0; i < sResIndex; i++) {
+			if (tchars[i] != schars[i]) {
+				return false;
+			}
+		}
+
 		return true;
 	}
 
-	public static void main(String[] args) {
+	public static boolean backspaceCompare(String S, String T) {
+		char backspace = '#';
+		char[] schars = S.toCharArray();
+		int sResIndex = getResIndex(schars, backspace);
+		char[] tchars = T.toCharArray();
+		int tResIndex = getResIndex(tchars, backspace);
 
+		if (sResIndex != tResIndex) {
+			return false;
+		}
+
+		for (int i = 0; i < sResIndex; i++) {
+			if (tchars[i] != schars[i]) {
+				return false;
+			}
+		}
+
+		return true;
+	}
+
+	public static int getResIndex(char[] chars, char backspace) {
+		int resIndex = 0;
+
+		for (int index = 0; index < chars.length; index++){
+			if (backspace != chars[index]) {
+				chars[resIndex++] = chars[index];
+			} else if (resIndex > 0) {
+				resIndex--;
+			}
+		}
+
+		return resIndex;
+	}
+
+	public static void main(String[] args) {
+		System.out.println(backspaceCompare("ab#c", "ad#c")); // true
+		System.out.println(backspaceCompare("ab##", "c#d#")); // true
+		System.out.println(backspaceCompare("a##c", "#a#c")); // true
+		System.out.println(backspaceCompare("a#c", "b")); // false
 	}
 }
