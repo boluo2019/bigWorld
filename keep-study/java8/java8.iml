@@ -10,11 +10,11 @@
     <orderEntry type="module-library">
       <library>
         <CLASSES>
-          <root url="jar://$MODULE_DIR$/../../../stellarjdbc/driver/target/stellarjdbc-driver-1.4.1-SNAPSHOT-jar-with-dependencies.jar!/" />
+          <root url="jar://$MODULE_DIR$/../../../../stellarjdbc/driver/target/stellarjdbc-driver-1.4.1-SNAPSHOT-jar-with-dependencies.jar!/" />
         </CLASSES>
         <JAVADOC />
         <SOURCES>
-          <root url="jar://$MODULE_DIR$/../../../stellarjdbc/driver/target/stellarjdbc-driver-1.4.1-SNAPSHOT-jar-with-dependencies.jar!/" />
+          <root url="jar://$MODULE_DIR$/../../../../stellarjdbc/driver/target/stellarjdbc-driver-1.4.1-SNAPSHOT-jar-with-dependencies.jar!/" />
         </SOURCES>
       </library>
     </orderEntry>
