@@ -1,9 +1,12 @@
 #黑巧香的简历
 
 #### 熟悉的技术
-- protobuf
-- grpc
-- leveldb
+- 消息模式
+    - protobuf
+- rpc框架
+    - grpc
+- 分布式存储
+    - leveldb
 - hbase
 
 ##### 基础技能，无需写到简历中，但是在面试时需要引导面试官询问：

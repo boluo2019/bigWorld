@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<!-- saved from url=(0080)https://exmail.qq.com/qy_mng_logic/proxy/ajaxftn?sid=NDmUXJJB-fO3kg5Q,2&r=248382 -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"></head><body><div id="qy_mng_logic.empty_layout_$" rendered="true"><div id="qy_mng_logic.empty_layout$layout$"><div id="qy_mng_logic.ajaxftn_$" rendered="true"> <script>function _html5detect() {
+var _oWin = window,
+_oInput = _oWin.document.createElement('input');
+_oInput.type = 'file';
+return 'multiple' in _oInput &&
+_oWin.File != undefined &&
+_oWin.XMLHttpRequest != undefined &&
+(new XMLHttpRequest).upload != undefined;
+}
+if (_html5detect()) {
+window.addEventListener('message', function (e) {
+var _oXhr = new XMLHttpRequest();
+_oXhr.open('POST', e.data._sUrl, true);
+_oXhr.timeout = 20000;
+_oXhr.setRequestHeader('DATA-MD5', e.data._asHash);
+_oXhr.setRequestHeader('content-type', 'application/octet-stream');
+_oXhr.setRequestHeader('Cache-Control', 'no-cache');
+_oXhr.responseType = 'arraybuffer';
+var originDomain = (e.origin.replace("https://", '').replace("http://", '').toLowerCase() || '').trim();
+var domain = ('exmail.qq.com'.toLowerCase() || '').trim();   _oXhr.onload = function () {
+if (_oXhr.readyState == 4) {
+_oXhr.upload.onprogress = null;
+if (_oXhr.status == 200) {
+e.source.postMessage(_oXhr.response, e.origin);
+}
+else {
+var _nErrCode = _oXhr.getResponseHeader('User-ReturnCode');
+e.source.postMessage(_nErrCode, e.origin);
+}
+}
+}
+_oXhr.send(e.data._oSendAB);
+}, false);
+}</script> </div></div></div></body></html>

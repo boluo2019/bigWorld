@@ -1,0 +1,68 @@
+
+<!-- saved from url=(0075)https://exmail.qq.com/zh_CN/htmledition/domain2.html?&r=0.14923409907709195 -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=GBK">
+	
+<script>
+(function()
+ {
+	//  debugger 
+	//瀛樺湪xss婕忔礊
+ 	// var _sDomain = location.search.split("?").pop().split("&").shift();
+	window.onerror = function(){return true;};
+	// _sDomain && (document.domain = decodeURIComponent(_sDomain));
+ }
+ )();
+</script>
+<script>
+if(window.location.hostname.indexOf("exmail.qq.com")!=-1){
+	document.domain="exmail.qq.com";
+}
+function xmlHttp()
+{
+ return window.ActiveXObject ? new ActiveXObject('Microsoft.XMLHTTP') : (window.XMLHttpRequest ? new XMLHttpRequest() : null);
+}
+
+var goBody = [];
+(function()
+{
+	if(!parent.getTop)
+	{
+		return;
+	}
+	var _oFrameElm = window.frameElement,
+		_oHeader = [decodeURIComponent(_oFrameElm.getAttribute("_header") || "")],
+		_sBody = decodeURIComponent(_oFrameElm.getAttribute("_body") || ""),
+		_oFiles = decodeURIComponent(_oFrameElm.getAttribute("_file") || "").split("|"),
+		_oFileInfo, _sFileType, _sFile;
+	_sBody.indexOf("<body") == -1 ? goBody.push('<body class="domain">', _sBody, '</body>') : goBody.push(_sBody);
+	for (var i = _oFiles.length - 1; i >= 0; i--)
+	{
+		_oFileInfo = _oFiles[i].split(":");
+		_sFileType = _oFileInfo.shift();
+		_sFile = _oFileInfo.join(":");
+		switch(_sFileType)
+		{
+		case "js":
+		case "html":
+		case "img":
+			if (_sFileType == "img" || 
+				navigator.userAgent.toLowerCase().indexOf("webkit") != -1)
+			{
+				goBody.push('<img src="', _sFile, '"/>');
+				break;
+			}
+			if (!','.split(/,/).length) //ie
+			{
+				_oHeader.push('<script src="', _sFile, '" ><\/script>');
+				break;
+			}
+		case "css":
+			_oHeader.push('<link rel="stylesheet" type="text/css" href="', _sFile, '" />');
+		}
+	}
+	_oHeader.push('<link rel="stylesheet" type="text/css" href="/zh_CN/htmledition/style/domain2.css" />');
+	document.write(_oHeader.join(""));
+}
+)();
+</script><script>function getTop(){var _oSelfFunc = arguments.callee;if (!_oSelfFunc._moTop){try{_oSelfFunc._moTop=window!=parent?(parent.getTop?parent.getTop():parent.parent.getTop()):window;}catch(_oError){_oSelfFunc._moTop=window;}}return _oSelfFunc._moTop;}</script><script>window.onerror = function() { return true; };</script><style>body {margin:0;overflow:auto;font:normal 14px Verdana;background:#fff;padding:2px 4px 0;cursor:text;}body, p, font, div, li { line-height: 1.5;}body, td, th {color:#000000;}.i {width:100%;*width:auto;table-layout:fixed;}pre {white-space: pre-wrap;white-space: -moz-pre-wrap;white-space: -pre-wrap;white-space: -o-pre-wrap;word-wrap: break-word;}a img {border:none;}a { color: -moz-hyperlinktext !important;text-decoration: -moz-anchor-decoration;}.cursor_formatMatch{cursor:url(https://rescdn.qqmail.com/bizmail/zh_CN/htmledition/images/newicon/cursor_format.cur), text;}</style><link rel="stylesheet" type="text/css" href="./domain2.css">
+<script>goBody && document.write(goBody.join(""));</script></head><body contenteditable="true" aria-label="邮件正文可编辑文本" style="padding: 2px 4px 0px; font-family: Verdana; font-size: 14px; color: rgb(0, 0, 0);"><div><br></div><div>hi, all:</div><div><br></div><div><sign signid="301"><div style="color:#909090;font-family:Arial Narrow;font-size:12px"><br><br><br><br></div><div style="font-size:14px;font-family:Verdana;color:#000;"><div style="display: table"><a target="_blank" contenteditable="false" href="https://work.weixin.qq.com/wework_admin/user/h5/qqmail_user_card/vc57f1aeb54bce29c8" class="weworkSignature_link" style="text-decoration: none;"><table data-wwcard="true" data-vid="1688852355286697" cellspacing="0" cellpadding="0" style="margin: 12px; margin-left:0;background-color:#fff;border-radius:4px;overflow:hidden;border: 1px solid #E6E6E6"><tbody><tr><td colspan="3" height="10" style="line-height: 1;"><div style="width: 10px; height: 10px;"></div></td></tr><tr><td width="12"><div style="width: 12px; height: 12px;"></div></td><td valign="top"><table cellspacing="0" cellpadding="0"><tbody><tr><td valign="top" align="left"><div style="font-size: 16px; font-weight: bold; color: #000; line-height: 1.3;min-width: 60px;max-width:250px; min-width: 150px; word-break: break-word; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">黑巧香</div><div style="margin-top: 12px"><div style="font-size: 12px; color: #353B42; margin-top: 6px; line-height: 1.3;max-width:250px;word-break: break-word; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">星环科技服务号</div></div></td><td width="20"><div style="width: 20px; height: 12px;"></div></td><td valign="top" align="right" style="text-align: right; font-size: 12px; color: #1F6CD7; line-height: 16px;"><div style="width:56px;"><img src="./wework_signature_qrcode456790.png" srcset="https://mail.qq.com/zh_CN/htmledition/images/wework/wework_signature_qrcode456790.png 1x, https://mail.qq.com/zh_CN/htmledition/images/wework/wework_signature_qrcode_2x456790.png 2x" width="13" height="13" style="width: 13px; height: 13px; vertical-align: -2px;" onerror=""> 联系我</div><div style="height: 1px; overflow:hidden;"><img src="./get_buss_card" style="width: 1px; height: 1px;" onerror=""></div></td></tr></tbody></table></td><td width="12"><div style="width: 12px; height: 12px;"></div></td></tr><tr><td colspan="3" height="10" style="line-height: 1;"><div style="width: 10px; height: 10px;"></div></td></tr></tbody></table></a></div></div></sign></div><div>&nbsp;</div><div><includetail><!--<![endif]--></includetail></div></body></html>

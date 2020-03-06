@@ -1,0 +1,162 @@
+a,a:link,a:visited {color:#28354b;}
+.switch .left,.switch .left a {color:#fff}
+li.fs a.fdleft,li.fs a.fdleft:link,li.fs a.fdleft:visited,li.fs a.fdleft:active,li.fd_mg a.fdleft,li.fd_mg a.fdleft:link,li.fd_mg a.fdleft:visited,li.fd_mg a.fdleft:active {color:#fff;} 
+.setinfo a,.setinfo a:visited {color:#fff}
+#allattch a,#allattch a:visited {color:#fff}
+li.fs a.fdleft:hover,li.fd_mg a.fdleft:hover,a.onlineman {color:#fff;}
+.mysidebar ul.navlist_min li.fs a,.mysidebar ul.navlist_max li.fs a {color:#28354b;}
+.mysidebar ul.navlist_min li.fs a:hover,.mysidebar ul.navlist_max li.fs a:hover {background:#9fbcde;}
+.attbg {background: #d6e2f1;}
+.tipstitle {background:#9c9c9c;}
+li.fs a.fdleft,li.fs a.fdleft:link,li.fs a.fdleft:visited,li.fs a.fdleft:active,li.fd_mg a.fdleft,li.fd_mg a.fdleft:link,li.fd_mg a.fdleft:visited,li.fd_mg a.fdleft:active {color:#fff; text-decoration:none;}
+
+.newskinbody li.fs a:hover, .newskinbody li.fs_sep a:hover {background:#415472;text-decoration:none;}
+.mysidebar ul.navlist_min li.fs a:hover,.mysidebar ul.navlist_max li.fs a:hover {background:#98a2b6;}
+/********* New Skin **********/
+.frame_class {padding:0;}
+.getuserdata {background:url(https://rescdn.qqmail.com/bizmail/zh_CN/htmledition/images/skin_47/top_bg_list264978.jpg) repeat-x;;}
+.getuserdata .switch, .getuserdata .switch a {color:#ffffff;}
+.getuserdata .topbg,.getuserdata .topbg a {color:#ffffff;}
+.getuserdata .topbg .search_subject a {color:#FFF;}
+.topline_height {height:5px;overflow:hidden;}
+.topline {background:url(https://rescdn.qqmail.com/bizmail/zh_CN/htmledition/images/skin_47/topline_bg264978.jpg) repeat-x;height:5px;}
+.toplineimg {background:url(https://rescdn.qqmail.com/bizmail/zh_CN/htmledition/images/skin_47/topline265932.jpg) -3px 0px no-repeat;width:197px;height:11px;}
+.fdbody {background:url(https://rescdn.qqmail.com/bizmail/zh_CN/htmledition/images/skin_47/left_bottom_bg264978.jpg) #919A95 0 596px;}
+#leftPanel {left:0;top:71px;width:187px;}
+.bodybgbt {width:190px;top:75px;}
+.listflow {left:0;bottom:170px;}
+.folderDiv {margin:0 16px 0 17px;}
+#mainFrameContainer {left:195px;top:71px}
+.newskinbody {background:url(https://rescdn.qqmail.com/bizmail/zh_CN/htmledition/images/skin_47/left_normal_bg264978.jpg) no-repeat;padding-left:8px;}
+/*new add for test end*/
+.attbg {background-color:#b3bdd1;}
+.addrtitle {color:#798699;}
+.navbottom {background:url(https://rescdn.qqmail.com/bizmail/zh_CN/htmledition/images/skin_47/navbar_bottom264978.gif) no-repeat; height: 164px; width: 184px;}
+#navBottomTd{left:0; width: 185px; height: 164px;}
+.sepline {border-top:1px solid #d8dee5;}
+.txt_title,.composetab_sel {color:#093665;}
+.txt_title_tab {color:#093665;background:url(https://rescdn.qqmail.com/bizmail/zh_CN/htmledition/images/skin_47/ico_titleview.gif) center bottom no-repeat;}
+.txt_title_none a:hover {color:#2c70c0;}
+.nomail {background:#dae1ef;}
+.msg {color:#FFFFFF;background:#68af02;}
+.errmsg {color:#FFFFFF;background:#eaa000;}
+/***** Setting Page*******/
+.settingTitle{ background:#98a2b6;}
+.settingTitle .selected{ background:#dae1ef;}
+.tabtitle {background:#98a2b6;border-top:5px solid #98a2b6;}
+.tabtitle td {border-bottom:1px solid #aac1de;}
+.tabtitle td.selected {border:1px solid #aac1de;border-bottom:none;background:#dae1ef}
+.tabtitle td a {width:100%;height:100%;}
+.tabtitle td a:hover {color:#2c70c0;}
+.settingtable {background-color:#dae1ef}
+.settingtd {border-top:1px solid #f9fcff;border-bottom:1px solid #c9d7e5;}
+.filtertd {border-top:1px solid #c9d7e5;}
+.filtertd1 {border-bottom:1px solid #c9d7e5;}
+.settingline {border-bottom:1px solid #fff;}
+.huizhi {background:#fff9e3;border:1px solid #fadc80;}
+/************************导航栏下的图片****************************/
+li.fn{color:#000;padding-right:4px; background:#3e649e;}
+li.fs, li.fn, li.f_calender {margin-right:8px;}
+.fn_list {background:#3e649e;}
+.fn_list a:link,.fn_list a:visited,.fn_list a:hover,.fn_list a:active {color:#000;}
+li.fs a.fn_list,li.fs a.fn_list:link,li.fs a.fn_list:visited {background:#3e649e;border:1px solid #7A9CC9;}
+li.fs .icon_folderlist_star {background-position:-80px -176px}
+li.fs .drifticon { background-position:-32px -190px;}
+.sizebar,.todaytip,.tipstitle,.cptitle{border:1px solid #6d6d6d ;}
+.cptab,.cpright,.addrsort {border:1px solid #ABC0DB ;}
+.txt_title_none a:hover,.tabtitle td a:hover {color:#3E65A0}
+.settingSub a:hover {color:#3E65A0}
+.huizhi {background:#fff9e3;border:1px solid #fadc80;}
+/*******************邮件列表按纽的背景渐变图***************************/
+.tipbg .toolbg{background:#9fbcde;}
+.tabtitle ,.addrsort{background:#9fbcde;}
+.settingTitle{background:#9fbcde;}
+.settingTitle ,.addrsort{background: #98a2b6;}
+.tabtitle {border-top:5px solid #9fbcde ;}
+.toolbgline,.tabtitle td,.readmailinfo,.addr_line,.filtertd1,.bartools {border-bottom:1px solid #98a2b6;}
+.filtertd {border-top:1px solid #ABC0DB ;}
+.tabtitle td.selected,.colorpanel,.bd,.tpinfo {border:1px solid #8BA7CC}
+.bd_upload {border:1px solid #5982B8;}
+.readmailinfo,.settingtable,.biginfo,.tipstitle,.colorsure {background:#dae1ef;}
+.todaybody .settingtable {background-position:80px 20px;}
+.tabtitle td.selected {background:#dae1ef;}
+.settingTitle .selected {background:#dae1ef;}
+.settingTitle .selected {background:#dae1ef;}
+.addrtitle {color:#7B8EAE;}
+.B,.nomail,.colortitle {background:#dae1ef;}
+.mailinfo {border-bottom:2px solid #fff;filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#ffffff, endColorstr=#dae1ef ,gradientType=0);}
+.colortitle {filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#eef1f3, endColorstr=#ffffff,gradientType=0);border:1px solid #fff;}
+.txt_title,.txt_title_tab,.biginfo,.tipstitle {color:#0A3665 ;}
+.topbg {float:right;background:url(https://rescdn.qqmail.com/bizmail/zh_CN/htmledition/images/skin_47/top_bg264978.jpg) no-repeat right;width:291px;height:68px;}
+.listbg {}
+.sepline {height:0;overflow:hidden;margin-bottom:3px; font-size:0px;border-top:2px solid #eaad3c;border-bottom:2px solid #91630f; }
+/***********导航栏文件夹文字的颜色***************/
+/*li.fs a:link,li.fs a:visited {color:#4B4632 ;}*/
+li.fs a:link,li.fs a:visited,li.fd_mg a:link,li.fd_mg a:visited {color:#fff;}
+li.fn a:link,li.fn a:visited {color:#fff;}
+li.fn a.fdleft:link,li.fn a.fdleft:visited {color:#fff;}
+li.fn a.fdleft:hover{color:#fff;}
+/***********导航栏收信，写信文字的颜色***************/
+.navbar a:link,.navbar a:visited {color:#fff;}
+.navbar a:hover {color:#fff}
+.secpwd_txt b {color:#fff;}
+/***********“我的文件夹”文字的颜色***************/
+.settingtd {border-top:1px solid #fff;}
+.addr_line {font-size:16px;font-weight:bold;border-bottom-width:2px;}
+/***** Setting Page*******/
+.tabtitle td.selected {border-bottom:none;}
+.settingline {border-bottom:1px solid #fff;}
+/********列表颜色控制表start*********/
+.toolbg,.toolbg1 {background-color:#98a2b6;}
+.toolbgline {border-bottom:1px solid #aac1de;}
+.O {background:#f2f4f6;border-bottom:1px solid #c1c8d2;border-top:1px solid #fff;}
+.B {background:#dae1ef;}
+.selbar_bt {background:#f2f4f6;border-top:1px solid #fff;border-bottom:1px solid #fff;}
+.graytip {background:#ffffe9;text-align:center;padding:3px 0;border-bottom:1px solid #e3e6eb;}
+.searchtip {background:#f2f4f6;padding:7px 0 7px 13px;border:1px solid #c1c8d2;margin-bottom:4px;clear:both;}
+.readmailinfo {background:#dae1ef;border-top:1px solid #fff;border-bottom:1px solid #aac1de;}
+/********列表颜色控制表end*********/
+.colorname {color:#798699}
+.txt {border:1px solid #718da6;height:20px;padding-top:2px;}
+.cpright {border:1px solid #7f9db9;background:#fff;}
+.cptitle {border-bottom:1px solid #7f9db9;height:26px!important;height:25px;height:/**/25px;}
+.cptab {position:absolute;height:25px;border:1px solid #7f9db9;border-bottom:none;line-height:24px;border-bottom:none;width:88px!important;width:90px;width:/**/90px;text-align:center;}
+.cpslt {background:#fff;height:25px;font-weight:bold;}
+.cpslt a {text-decoration:none;color:#000;}
+.addrtips {border-bottom:1px solid #d8dee5;padding:7px 0 3px 6px;margin:3px;color:#979ea5;}
+.addrsort {border-top:1px solid #7f9db9;background:#e0ecf8;height:23px;line-height:23px;padding-left:8px;cursor:pointer;}
+.bartools {background:#fff;border-bottom:1px solid #c5d8ee;}
+.colorpanel {border:1px solid #b8d3ed;}
+.colortitle {filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#deeeff, endColorstr=#ffffff,gradientType=0);border:1px solid #fff;background:#deeeff;}
+.bd {border:1px solid #a7c5e2;}
+.bd_upload {border:1px solid #4e86c4;}
+.biginfo {background:#ebf3fb;color:#4a8f00;}
+.tpinfo {background:#fff;border-top:1px solid #d2e2f4;color:#6a727a;}
+.leftpanel {border-bottom:1px solid #d3e4f7;}
+.todaytip,.rightpanel,.qqshowbd,.newu {border:1px solid #d3e1f0;}
+.colorsure {background:#e7f0fa;}
+.rightpanel legend,.newu legend,.tipstitle,.teachbg {color:#07396d;}
+.mailinfo {border-bottom:2px solid #fff;filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#ffffff, endColorstr=#f0f6fd,gradientType=0);}
+.grptitle {background:#9bc2ed;color:#fff;border:1px solid #d1e5f8;border-bottom:none;}
+.bd_webqq {border:1px solid #fff;border-top:none;}
+.bd_ccc {border:1px solid #d1e5f8;border-top:none;border-left:none;}
+.bd_fff {border-left:1px solid #d1e5f8;}
+.composetab_sel {filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#b3bdd1, endColorstr=#98a2b6,gradientType=0);background:#98a2b6;}
+.composetab_unsel {filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#b3bdd1, endColorstr=#dae1ef,gradientType=0);background:#b3bdd1;}
+input.composebtn,input.addrbtn,input.checkbtn {background-image:url(https://rescdn.qqmail.com/bizmail/zh_CN/htmledition/images/newicon/cca087793.gif);}
+.grptitle_tab {filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#e7f0f8, endColorstr=#ffffff,gradientType=0);background:#e7f0f8;}
+.grptitle_tab_ {filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#ffffff, endColorstr=#e7f0f8,gradientType=0);background:#e7f0f8;}
+.tipstitle {filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#f2f6fb, endColorstr=#ffffff,gradientType=0);border:1px solid #fff;background:#f3f7fd;}
+li.fs {color:#0055ac;}
+li.fn {background:#528bcb;color:#FFFFFF;}
+.fn_list {background:#528bcb;}
+.fn_list a:link,.fn_list a:visited,.fn_list a:hover,.fn_list a:active {color:#FFFFFF;}
+li.fn a:link,li.fn a:visited {color:#FFFFFF;}
+.backhomeimg_today {background:url(https://rescdn.qqmail.com/bizmail/zh_CN/htmledition/images/skin_47/ico_home264978.gif) no-repeat;}
+/***/
+.tabtitle {border-top-width:4px;}
+.tabtitle td {line-height:28px;}
+
+.secret_composetab_sel, .secret_bgline{
+    background-color: #7891B7;
+}

@@ -1,0 +1,68 @@
+
+<!-- saved from url=(0053)https://exmail.qq.com/zh_CN/htmledition/domain2.html? -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=GBK">
+	
+<script>
+(function()
+ {
+	//  debugger 
+	//存在xss漏洞
+ 	// var _sDomain = location.search.split("?").pop().split("&").shift();
+	window.onerror = function(){return true;};
+	// _sDomain && (document.domain = decodeURIComponent(_sDomain));
+ }
+ )();
+</script>
+<script>
+if(window.location.hostname.indexOf("exmail.qq.com")!=-1){
+	document.domain="exmail.qq.com";
+}
+function xmlHttp()
+{
+ return window.ActiveXObject ? new ActiveXObject('Microsoft.XMLHTTP') : (window.XMLHttpRequest ? new XMLHttpRequest() : null);
+}
+
+var goBody = [];
+(function()
+{
+	if(!parent.getTop)
+	{
+		return;
+	}
+	var _oFrameElm = window.frameElement,
+		_oHeader = [decodeURIComponent(_oFrameElm.getAttribute("_header") || "")],
+		_sBody = decodeURIComponent(_oFrameElm.getAttribute("_body") || ""),
+		_oFiles = decodeURIComponent(_oFrameElm.getAttribute("_file") || "").split("|"),
+		_oFileInfo, _sFileType, _sFile;
+	_sBody.indexOf("<body") == -1 ? goBody.push('<body class="domain">', _sBody, '</body>') : goBody.push(_sBody);
+	for (var i = _oFiles.length - 1; i >= 0; i--)
+	{
+		_oFileInfo = _oFiles[i].split(":");
+		_sFileType = _oFileInfo.shift();
+		_sFile = _oFileInfo.join(":");
+		switch(_sFileType)
+		{
+		case "js":
+		case "html":
+		case "img":
+			if (_sFileType == "img" || 
+				navigator.userAgent.toLowerCase().indexOf("webkit") != -1)
+			{
+				goBody.push('<img src="', _sFile, '"/>');
+				break;
+			}
+			if (!','.split(/,/).length) //ie
+			{
+				_oHeader.push('<script src="', _sFile, '" ><\/script>');
+				break;
+			}
+		case "css":
+			_oHeader.push('<link rel="stylesheet" type="text/css" href="', _sFile, '" />');
+		}
+	}
+	_oHeader.push('<link rel="stylesheet" type="text/css" href="/zh_CN/htmledition/style/domain2.css" />');
+	document.write(_oHeader.join(""));
+}
+)();
+</script><script>function getTop(){var _oSelfFunc = arguments.callee;if (!_oSelfFunc._moTop){try{_oSelfFunc._moTop=window!=parent?(parent.getTop?parent.getTop():parent.parent.getTop()):window;}catch(_oError){_oSelfFunc._moTop=window;}}return _oSelfFunc._moTop;}</script><style>body, table, form {padding:0;margin:0;font-family:Verdana;font-size:12px;line-height:12px;}table {padding-top:2px;}.QMEditorTabEmptyLeft, .QMEditorTabEmptyRight {border-bottom:1px solid #aeaeae;}.QMEditorTabEmptyLeft {padding-left:10px;}.QMEditorTabEmptyRight {width:100%;}.QMEditorTab {padding:4px 4px 2px 4px;border:1px solid #aeaeae;margin-top:2px;cursor:pointer;} .QMEditorTabSel {padding:4px;border:1px solid #aeaeae;border-bottom:none;border-top:2px solid #FFC83C;font-weight:bold;cursor:pointer;}.QMEditorPoPanel {padding:15px 0 0 15px;}.QMEditorPoDesc {margin-bottom:6px;color:gray;}.QMEditorPoInputLabel {padding:5px 0 15px 1px;}input {width:232px;height:20px;}.QMEditorPoButton {text-align:right;padding-right:15px;}.QMEditorButton1 {width:52px;margin:1px 2px 0 0}.QMEditorButton2 {width:76px;*width:72px;margin:1px 2px 0 0}.QMEditorButton1 .QMEditorButton2 {font-size:12x;height:auto;*height:22px;line-height:auto;*line-height:18px;padding:0 8px;*padding:0;}</style><link rel="stylesheet" type="text/css" href="./getcss(2)"><link rel="stylesheet" type="text/css" href="./comm.css"><link rel="stylesheet" type="text/css" href="./domain2.css">
+<script>goBody && document.write(goBody.join(""));</script></head><body tabindex="-1" unselectable="on" style="background: transparent;"><iframe tabindex="-1" name="QMEditorPhotoIframe1581586900744" src="javascript:&#39;&#39;" style="display:none;" onload="if(window.QMEditorPhotoLoaded)QMEditorPhotoLoaded(this);" src="./saved_resource(3).html"></iframe><form tabindex="-1" action="https://exmail.qq.com/cgi-bin/upload?uin=2618215949&amp;sid=NDmUXJJB-fO3kg5Q,2" id="composeImgForm" enctype="multipart/form-data" method="post" target="QMEditorPhotoIframe1581586900744"><input tabindex="-1" type="file" name="UploadFile" id="composeUploadFile" onkeydown="return false;" style="padding-top: 25px;margin-top: -10px;margin-left: -10px;cursor: pointer;margin-top:-3px\9;font-size:200px;"><input type="hidden" name="sid" value="NDmUXJJB-fO3kg5Q,2"><input type="hidden" name="fun" value="add"><input type="hidden" name="mode" value="download"><input type="hidden" name="widthlimit" value="0"><input type="hidden" name="heightlimit" value="0"><input type="hidden" name="sizelimit" value="0"></form></body></html>

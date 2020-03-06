@@ -1,0 +1,69 @@
+
+<!-- saved from url=(0053)https://exmail.qq.com/zh_CN/htmledition/domain2.html? -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=GBK">
+	
+<script>
+(function()
+ {
+	//  debugger 
+	//存在xss漏洞
+ 	// var _sDomain = location.search.split("?").pop().split("&").shift();
+	window.onerror = function(){return true;};
+	// _sDomain && (document.domain = decodeURIComponent(_sDomain));
+ }
+ )();
+</script>
+<script>
+if(window.location.hostname.indexOf("exmail.qq.com")!=-1){
+	document.domain="exmail.qq.com";
+}
+function xmlHttp()
+{
+ return window.ActiveXObject ? new ActiveXObject('Microsoft.XMLHTTP') : (window.XMLHttpRequest ? new XMLHttpRequest() : null);
+}
+
+var goBody = [];
+(function()
+{
+	if(!parent.getTop)
+	{
+		return;
+	}
+	var _oFrameElm = window.frameElement,
+		_oHeader = [decodeURIComponent(_oFrameElm.getAttribute("_header") || "")],
+		_sBody = decodeURIComponent(_oFrameElm.getAttribute("_body") || ""),
+		_oFiles = decodeURIComponent(_oFrameElm.getAttribute("_file") || "").split("|"),
+		_oFileInfo, _sFileType, _sFile;
+	_sBody.indexOf("<body") == -1 ? goBody.push('<body class="domain">', _sBody, '</body>') : goBody.push(_sBody);
+	for (var i = _oFiles.length - 1; i >= 0; i--)
+	{
+		_oFileInfo = _oFiles[i].split(":");
+		_sFileType = _oFileInfo.shift();
+		_sFile = _oFileInfo.join(":");
+		switch(_sFileType)
+		{
+		case "js":
+		case "html":
+		case "img":
+			if (_sFileType == "img" || 
+				navigator.userAgent.toLowerCase().indexOf("webkit") != -1)
+			{
+				goBody.push('<img src="', _sFile, '"/>');
+				break;
+			}
+			if (!','.split(/,/).length) //ie
+			{
+				_oHeader.push('<script src="', _sFile, '" ><\/script>');
+				break;
+			}
+		case "css":
+			_oHeader.push('<link rel="stylesheet" type="text/css" href="', _sFile, '" />');
+		}
+	}
+	_oHeader.push('<link rel="stylesheet" type="text/css" href="/zh_CN/htmledition/style/domain2.css" />');
+	document.write(_oHeader.join(""));
+}
+)();
+</script><script>function getTop(){var _oSelfFunc = arguments.callee;if (!_oSelfFunc._moTop){try{_oSelfFunc._moTop=window!=parent?(parent.getTop?parent.getTop():parent.parent.getTop()):window;}catch(_oError){_oSelfFunc._moTop=window;}}return _oSelfFunc._moTop;}</script><link rel="stylesheet" type="text/css" href="./domain2.css">
+<script>goBody && document.write(goBody.join(""));</script></head><body class="domain">
+</body></html>
